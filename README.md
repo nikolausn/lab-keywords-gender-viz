@@ -1,3 +1,3 @@
-# keywordsGenderViz
+# keywords-gender-viz
 
-a [Sails](http://sailsjs.org) application
+a vizualisation application for visualizing graphics and gender in books

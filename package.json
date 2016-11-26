@@ -30,7 +30,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nikolausn/keywordsGenderViz.git"
+    "url": "git://github.com/nikolausn/lab-keywords-gender-viz.git"
   },
   "author": "nikolausn",
   "license": ""

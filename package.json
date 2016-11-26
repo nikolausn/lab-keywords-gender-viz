@@ -1,7 +1,7 @@
 {
-    "name": "angular-sailsjs-boilerplate",
+    "name": "keywords-gender-viz",
     "version": "1.0.0",
-    "description": "Example boilerplate application for AngularJS + Sails.js with separated back- and frontend.",
+    "description": "keywords-gender-viz visualization applicatin",
     "keywords": [
         "sails.js",
         "backend",
@@ -25,11 +25,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/tarlepp/angular-sailsjs-boilerplate.git"
+        "url": "git://github.com/nikolausn/lab-keywords-gender-viz.git"
     },
     "bugs": {
-        "url": "https://github.com/tarlepp/angular-sailsjs-boilerplate/issues"
+        "url": "https://github.com/nikolausn/lab-keywords-gender-viz/issues"
     },
-    "author": "Tarmo Leppänen",
+    "author": "nikolausn",
     "license": "MIT"
 }

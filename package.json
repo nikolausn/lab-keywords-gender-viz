@@ -1,0 +1,20 @@
+{
+  "name": "lab-keywords-gender-viz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolausn/lab-keywords-gender-viz.git"
+  },
+  "author": "nnp2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikolausn/lab-keywords-gender-viz/issues"
+  },
+  "homepage": "https://github.com/nikolausn/lab-keywords-gender-viz#readme"
+}

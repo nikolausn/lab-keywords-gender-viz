@@ -33,7 +33,8 @@
     "sails-hook-apianalytics": "git://github.com/mikermcneil/sails-hook-apianalytics",
     "sails-mysql": "0.11.0",
     "ua-parser": "0.3.5",
-    "validator": "4.2.1"
+    "validator": "4.2.1",
+    "waterline-sqlite3": "^1.0.3"
   },
   "devDependencies": {
     "chai": "3.4.0",

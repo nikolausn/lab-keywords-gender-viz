@@ -74,6 +74,24 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
+  },
+
+  sqlitedb: {
+    /**
+     * Database instance type. Specify whether to store the database on disk
+     * or in memory.
+     */
+    adapter: 'waterline-sqlite3', // or 'memory'
+
+    /**
+     * Location of file if type='disk'
+     */
+    filename: '/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/booksgender.sqlite',
+
+    /**
+     * Set to true to output SQL queries
+     */
+    debug: false
   }
 
   /**

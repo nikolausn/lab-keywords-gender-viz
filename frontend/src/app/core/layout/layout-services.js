@@ -19,7 +19,7 @@
           },
           {
             state: 'examples',
-            title: 'Examples',
+            title: 'Books Visualization',
             access: AccessLevels.user
           },
           {
@@ -45,18 +45,8 @@
               access: AccessLevels.user
             },
             {
-              state: 'examples.authors',
-              title: 'Authors',
-              access: AccessLevels.user
-            },
-            {
-              state: 'examples.messages',
-              title: 'Messages',
-              access: AccessLevels.user
-            },
-            {
-              state: 'examples.chat',
-              title: 'Chat',
+              state: 'examples.genderviz',
+              title: 'Display Visualization',
               access: AccessLevels.user
             }
           ],
@@ -102,7 +92,7 @@
          *
          * @type {string}
          */
-        var repository = 'https://github.com/tarlepp/angular-sailsjs-boilerplate/blob/master/';
+        var repository = 'https://github.com/nikolausn/lab-keywords-gender-viz';
 
         /**
          * Type configuration for files.

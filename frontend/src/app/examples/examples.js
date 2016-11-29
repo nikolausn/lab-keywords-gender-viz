@@ -18,7 +18,8 @@
     'frontend.examples.author',
     'frontend.examples.book',
     'frontend.examples.chat',
-    'frontend.examples.messages'
+    'frontend.examples.messages',
+    'frontend.dataviz.genderviz'
   ]);
 
   // Module configuration

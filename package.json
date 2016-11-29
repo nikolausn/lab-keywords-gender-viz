@@ -1,35 +1,37 @@
 {
-    "name": "keywords-gender-viz",
-    "version": "1.0.0",
-    "description": "keywords-gender-viz visualization applicatin",
-    "keywords": [
-        "sails.js",
-        "backend",
-        "REST",
-        "API",
-        "JWT",
-        "JSON Web Token",
-        "Passport.js",
-        "frontend",
-        "angular",
-        "slush",
-        "slush-angular"
-    ],
-    "main": "",
-    "dependencies": {},
-    "devDependencies": {},
-    "scripts": {
-        "install": "git submodule update --init --recursive && cd backend && npm install && cd ../frontend && npm install",
-        "start": "(cd backend && sails lift) & (cd frontend && gulp serve)",
-        "test": "cd backend && mocha"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/nikolausn/lab-keywords-gender-viz.git"
-    },
-    "bugs": {
-        "url": "https://github.com/nikolausn/lab-keywords-gender-viz/issues"
-    },
-    "author": "nikolausn",
-    "license": "MIT"
+  "name": "keywords-gender-viz",
+  "version": "1.0.0",
+  "description": "keywords-gender-viz visualization applicatin",
+  "keywords": [
+    "sails.js",
+    "backend",
+    "REST",
+    "API",
+    "JWT",
+    "JSON Web Token",
+    "Passport.js",
+    "frontend",
+    "angular",
+    "slush",
+    "slush-angular"
+  ],
+  "main": "",
+  "dependencies": {
+    "rc": "^1.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "git submodule update --init --recursive && cd backend && npm install && cd ../frontend && npm install",
+    "start": "(cd backend && sails lift) & (cd frontend && gulp serve)",
+    "test": "cd backend && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nikolausn/lab-keywords-gender-viz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikolausn/lab-keywords-gender-viz/issues"
+  },
+  "author": "nikolausn",
+  "license": "MIT"
 }

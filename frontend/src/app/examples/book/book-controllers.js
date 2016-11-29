@@ -171,7 +171,8 @@
         // Add default list configuration variable to current scope
         $scope = angular.extend($scope, angular.copy(ListConfig.getConfig()));
 
-        // Set initial data
+
+        // Set initial data        
         $scope.items = _items;
         $scope.itemCount = _count.count;
         $scope.authors = _authors;

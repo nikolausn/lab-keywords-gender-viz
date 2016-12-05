@@ -124,6 +124,10 @@ var AuthController = {
             next(error);
           } else if (!passport) {
             next({message: 'Given authorization token is not valid'});
+            /*
+            Temporary for testing api and sqlite
+            */ 
+            //next(null, passport);
           } else {
             next(null, passport);
           }

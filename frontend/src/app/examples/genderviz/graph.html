@@ -4,17 +4,25 @@
 <div class="row">
     <div class="col-sm-12 col-md-6">
     <label for="keywords" class="col-md-3 control-label">Keywords: </label>
-    <input id="keywords" name="keywords" class="form-control" type="text" placeholder="Enter keywords separated by comma and press Enter"
+    <input id="keywords" name="keywords" class="form-control" type="text" placeholder="Enter a keyword and press Enter"
            data-ng-model="keywords"
            data-ui-keypress="{'enter': 'keywordsChange($event)'}"
         />
     </div>
     <div class="col-sm-12 col-md-6">
-    Gender:
+    <label for="groupby" class="col-md-3 control-label">Group by: </label>
+        
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-    keywords: {{keywordArray}}
+    <div class="col-md-6">
+    <canvas id="line-authgender" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
+    </div>
+    <div class="col-md-6">
+    <canvas id="line-chargender" class="chart chart-line" chart-data="data_char" chart-labels="labels_char" chart-series="series" chart-options="options_char" chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
+    </div>
     </div>
 </div>

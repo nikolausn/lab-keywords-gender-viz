@@ -270,6 +270,9 @@
          */
         DataModel.prototype.load = function load(parameters, fromCache) {
           var self = this;
+          console.log('parameters:'+JSON.stringify(parameters));
+          console.log('fromCache:'+JSON.stringify(fromCache));
+          console.log('self.endpoint:'+self.endpoint);
 
           // Normalize parameters
           parameters = parameters || {};
@@ -335,6 +338,7 @@
             .fetch(self.endpoint, identifier, parameters)
             .then(
               function onSuccess(response) {
+                console.log(self.endpoint+':'+identifier+':'+parameters);
                 self.object = response.data;
 
                 if (fromCache && self.scope && self.itemNames.object) {

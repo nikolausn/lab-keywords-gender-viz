@@ -11,6 +11,7 @@
     "slush, angular, slush-angular"
   ],
   "dependencies": {
+    "angular-chart.js": "^1.0.3",
     "bower": "1.6.5",
     "connect-history-api-fallback": "1.1.0"
   },

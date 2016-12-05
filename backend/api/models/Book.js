@@ -9,7 +9,9 @@ var _ = require('lodash');
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 module.exports = _.merge(_.cloneDeep(require('../base/Model')), {
+   connection: 'localDiskDb',
   attributes: {
+
     // Book title
     title: {
       type: 'string',

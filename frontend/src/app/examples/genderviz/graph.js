@@ -10,7 +10,7 @@
   'use strict';
 
   // Define frontend.examples.book angular module
-  angular.module('frontend.dataviz.genderviz', []);
+  angular.module('frontend.dataviz.genderviz', ['chart.js']);
 
   // Module configuration
   angular.module('frontend.dataviz.genderviz')

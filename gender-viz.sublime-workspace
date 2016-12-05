@@ -3,81 +3,99 @@
 	{
 		"selected_items":
 		[
+			[
+				"Book",
+				"BooksGender"
+			],
+			[
+				"group",
+				"grouptype"
+			],
+			[
+				"sqlite",
+				"sqlitedb"
+			],
+			[
+				"col",
+				"col-sm-12"
+			],
+			[
+				"keyw",
+				"keywordArray"
+			],
+			[
+				"key",
+				"keywordArray"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "backend/api/controllers/AuthController.js",
 			"settings":
 			{
-				"buffer_size": 889,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/dummy.js",
-			"settings":
-			{
-				"buffer_size": 333,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/package.json",
-			"settings":
-			{
-				"buffer_size": 1557,
+				"buffer_size": 5886,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/package.json",
+			"file": "backend/api/models/UserLogin.js",
 			"settings":
 			{
-				"buffer_size": 1422,
+				"buffer_size": 1524,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/src/dummy.js",
+			"file": "backend/api/policies/authenticated.js",
 			"settings":
 			{
-				"buffer_size": 372,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/src/app/app.js",
-			"settings":
-			{
-				"buffer_size": 5023,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/src/app/core/layout/partials/header.html",
-			"settings":
-			{
-				"buffer_size": 1818,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/src/app/index.html",
-			"settings":
-			{
-				"buffer_size": 1680,
+				"buffer_size": 1817,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "backend/app.js",
+			"file": "backend/api/services/Token.js",
 			"settings":
 			{
-				"buffer_size": 1662,
+				"buffer_size": 2529,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/api/models/User.js",
+			"settings":
+			{
+				"buffer_size": 1606,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/api/services/Logger.js",
+			"settings":
+			{
+				"buffer_size": 3613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/config/policies.js",
+			"settings":
+			{
+				"buffer_size": 2714,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/api/models/Passport.js",
+			"settings":
+			{
+				"buffer_size": 3947,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,17 +137,103 @@
 	"expanded_folders":
 	[
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend",
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api",
-		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/test",
-		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/base",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/controllers",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/hooks",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/policies",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/responses",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/services",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/services/protocols",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/env",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/locales",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/node_modules/waterline-sqlite3",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/node_modules/waterline-sqlite3/node_modules",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/node_modules/waterline-sqlite3/node_modules/knex",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/node_modules/waterline-sqlite3/node_modules/knex/lib",
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src",
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app",
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core",
-		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout",
-		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/partials"
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/chat",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/messages"
 	],
 	"file_history":
 	[
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/bower_components/angularSails/dist/ngsails.io.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/graph-controllers.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/graph.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/node_modules/waterline-sqlite3/node_modules/knex/lib/raw.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/base/Model.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/services/Token.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/routes.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/test/fixtures/Author.json",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/bootstrap.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/connections.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/blueprints.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/models.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/Author.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/Book.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/User.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/Passport.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/Message.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/UserLogin.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/RequestLog.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/base/Controller.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/policies/addDataUpdate.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/policies/authenticated.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/policies/isAdmin.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/policies/Passport.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/models/BooksGender.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/controllers/BooksGenderController.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/app.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/package.json",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/controllers/AuthorController.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/controllers/MessageController.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/controllers/BookController.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/api/hooks/load-db.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/csrf.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/local.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/config/views.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/graph-models.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/package.json",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/dummy.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/package.json",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/dummy.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/app.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/examples.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/partials/header.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/layout.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/partials/help.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/partials/navigation.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/layout-services.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/services/ListConfigService.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/book.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/list-info.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/book.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/list.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/book.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/book.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/book-controllers.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/book-models.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/book-models.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/add.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/models/DataModel.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/services/DataService.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/book/book-controllers.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/about/about.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/list-info.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/examples/genderviz/graph.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/partials/footer.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/layout-controllers.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/core/layout/layout-directives.js",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/src/app/index.html",
+		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend/.tmp/index.html",
 		"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend/.travis.yml",
 		"/Volumes/HD-500GB/Users/nikolausn/override.json",
 		"/Volumes/HD-500GB/Users/nikolausn/Downloads/Download_Lookup-4.asp",
@@ -144,6 +248,13 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/frontend",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/backend",
+			"/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz"
 		]
 	},
 	"find_state":
@@ -151,6 +262,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"TEMPOR",
+			"TEMPO",
+			"TEMP",
+			"temp",
+			"for testing api and sqlite",
+			"Temporary",
+			"ejs",
+			"Given authorization token is not valid",
+			"Given aut",
+			"No authorization header was found",
+			"No authorization",
+			"William Gibson",
+			"module.exports",
+			"hook",
+			"load-db",
+			"Author",
+			"1337",
+			"aggregateKeywords",
+			"ListConfig",
+			"LIstConfig",
+			"list",
+			"book",
+			"frontend.examples.book",
+			"examples.books",
 			"express"
 		],
 		"highlight": true,
@@ -169,134 +304,136 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
+					"file": "backend/api/controllers/AuthController.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 889,
+						"buffer_size": 5886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								215,
-								215
+								4348,
+								4348
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1717.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "backend/dummy.js",
+					"file": "backend/api/models/UserLogin.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 333,
+						"buffer_size": 1524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								333,
-								333
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "backend/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								427,
-								427
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 130.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "frontend/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1422,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								378,
-								378
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9.0,
+						"translation.y": 329.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "frontend/src/dummy.js",
+					"buffer": 2,
+					"file": "backend/api/policies/authenticated.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 372,
+						"buffer_size": 1817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1321,
+								1321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "backend/api/services/Token.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2416,
+								2416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 403.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "backend/api/models/User.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1606,
 						"regions":
 						{
 						},
@@ -317,24 +454,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "frontend/src/app/app.js",
-					"semi_transient": false,
+					"file": "backend/api/services/Logger.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 5023,
+						"buffer_size": 3613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1186,
-								1192
+								0,
+								0
 							]
 						],
 						"settings":
@@ -344,97 +481,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 981.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "frontend/src/app/core/layout/partials/header.html",
+					"file": "backend/config/policies.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1818,
+						"buffer_size": 2714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								553,
-								553
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "frontend/src/app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								357,
-								361
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "backend/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1662,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								335
+								1934,
+								1934
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 70.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "backend/api/models/Passport.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3146,
+								3146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,

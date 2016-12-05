@@ -7,6 +7,8 @@
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 module.exports = {
+  connection: 'localDiskDb',
+
   schema: true,
 
   attributes: {

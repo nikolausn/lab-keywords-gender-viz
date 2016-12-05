@@ -301,12 +301,14 @@
          * @private
          */
         function _fetchData() {
+          console.log('fetch book');
           $scope.loading = true;
 
           // Common parameters for count and data query
           var commonParameters = {
             where: SocketHelperService.getWhere($scope.filters)
           };
+          console.log('commonParameters: '+JSON.stringify(commonParameters));
 
           // Data query specified parameters
           var parameters = {
@@ -314,6 +316,7 @@
             skip: ($scope.currentPage - 1) * $scope.itemsPerPage,
             sort: $scope.sort.column + ' ' + ($scope.sort.direction ? 'ASC' : 'DESC')
           };
+          console.log('parameters: '+JSON.stringify(parameters));
 
           // Fetch data count
           var count = BookModel

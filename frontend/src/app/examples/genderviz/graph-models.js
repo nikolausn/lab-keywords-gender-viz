@@ -14,7 +14,7 @@
     .factory('GraphModel', [
       'DataModel',
       function factory(DataModel) {
-        return new DataModel('graph');
+        return new DataModel('BooksGender/group');
       }
     ])
   ;

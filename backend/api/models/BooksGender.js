@@ -6,7 +6,12 @@
  */
 
 module.exports = {
+  schema:true,
   connection: 'sqlitedb',
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+  tablename: 'booksgender',
+  autoPK: false,
   attributes: {
   	// Date time of book release
   	date: {
@@ -37,15 +42,6 @@ module.exports = {
   	count: {
   		type: 'integer',
   		required: true
-  	},
-
-  	// Below is all specification for relations to another models if any
-
-
-  	// Below is aggregate function
-  	aggregateByKeywords: function(params,callback){
-  	 return null;
   	}
-  }
-};
-
+	}
+}

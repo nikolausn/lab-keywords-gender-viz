@@ -17,6 +17,7 @@ module.exports.models = {
    * connections (see `config/connections.js`)                                *
    *                                                                          *
    ***************************************************************************/
-  connection: 'localDiskDb',
-  migrate: 'alter'
+  //connection: 'localDiskDb',
+  connection: 'sqlitedb',  
+  migrate: 'safe'
 };

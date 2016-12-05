@@ -78,5 +78,11 @@ module.exports.policies = {
     'destroy':    false,
     'add':        false,
     'remove':     false
+  },
+
+  // BooksGender controller
+  BooksGenderController: {
+    '*': true
   }
+
 };

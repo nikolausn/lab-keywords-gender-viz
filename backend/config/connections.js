@@ -86,7 +86,7 @@ module.exports.connections = {
     /**
      * Location of file if type='disk'
      */
-    filename: '/Volumes/HD-500GB/Users/nikolausn/Documents/msimsvn/msimrepo/lab-keywords-gender-viz/booksgender.sqlite',
+    filename: '.tmp/booksgender.sqlite',
 
     /**
      * Set to true to output SQL queries

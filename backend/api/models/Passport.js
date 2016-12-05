@@ -17,6 +17,8 @@ var bcrypt = require('bcryptjs');
  * the user, but not the authentication data, to and from the session.
  */
 var Passport = {
+  connection: 'localDiskDb',
+
   schema: true,
 
   attributes: {

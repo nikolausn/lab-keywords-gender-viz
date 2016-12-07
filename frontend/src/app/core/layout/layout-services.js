@@ -20,7 +20,7 @@
           {
             state: 'examples',
             title: 'Books Visualization',
-            access: AccessLevels.user
+            access: AccessLevels.anon
           },
           {
             state: 'admin',
@@ -39,11 +39,11 @@
       function factory(AccessLevels) {
         var items = {
           'examples': [
-            {
+           /* {
               state: 'examples.books',
               title: 'Books',
               access: AccessLevels.user
-            },
+            },*/
             {
               state: 'examples.genderviz',
               title: 'Display Visualization',

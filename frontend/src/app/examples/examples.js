@@ -38,7 +38,7 @@
                 controller: [
                   '$state',
                   function($state) {
-                    $state.go('examples.books');
+                    $state.go('examples.genderviz');
                   }
                 ]
               },

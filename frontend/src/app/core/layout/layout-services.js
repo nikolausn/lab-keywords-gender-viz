@@ -47,7 +47,7 @@
             {
               state: 'examples.genderviz',
               title: 'Display Visualization',
-              access: AccessLevels.user
+              access: AccessLevels.anon
             }
           ],
           'admin': [

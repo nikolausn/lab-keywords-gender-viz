@@ -31,7 +31,7 @@
           .state('examples', {
             parent: 'frontend',
             data: {
-              access: 1
+              access: 0
             },
             views: {
               'content@': {

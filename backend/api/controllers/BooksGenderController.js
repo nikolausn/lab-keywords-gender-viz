@@ -31,7 +31,7 @@ var BooksGenderController = {
         */
 
         sails.services.booksgendersummary.getSummaries(Model).promise.then(function(sumBooks) {
-            console.log(sumBooks);
+            //console.log(sumBooks);
             /*
             parse yearlySummary into hash table
             */

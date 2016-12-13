@@ -45,7 +45,7 @@
                         $scope.loading = true;
                         console.log(keywordArray[0]);
                         var parameters = {
-                            grouptype: 'authgender',
+//                            grouptype: 'authgender',
                             keyword: keywordArray[0]
                         };
 

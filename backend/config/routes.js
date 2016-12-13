@@ -33,6 +33,6 @@ module.exports.routes = {
   'POST /login/:action': 'AuthController.callback',
   'POST /auth/local': 'AuthController.callback',
   'POST /auth/local/:action': 'AuthController.callback',
-  'GET /BooksGender/group/:grouptype/:keyword': 'BooksGenderController.group'
+  'GET /BooksGender/group/:keyword': 'BooksGenderController.group'
 
 };

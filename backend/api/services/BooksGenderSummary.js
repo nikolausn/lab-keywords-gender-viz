@@ -35,6 +35,11 @@ exports.getSummaries = function getSummaries(model) {
         model.query("select date,sum(count) as total from booksgender group by date order by date", [],
             function(error, results) {
                 summaries.yearlyCounts = results;
+                var years = []
+                for (var i = 0; i < results.length; i++) {
+                  years.push(results[i].date);
+                }
+                summaries.years = years;
                 summaryPromise.resolve(summaries);
             }
         );

@@ -4,115 +4,252 @@
  * Note that this file should only contain controllers and nothing else.
  */
 (function() {
-        'use strict';
+    'use strict';
 
 
-        // Controller which contains all necessary logic for book list GUI on boilerplate application.
-        angular.module('frontend.dataviz.genderviz')
-            .controller('GraphController', [
-                '$scope', '$q', '$timeout',
-                '_',
-                'SocketHelperService',
-                'UserService', 'GraphModel',
-                '_keywords',
-                function controller(
-                    $scope, $q, $timeout,
-                    _,
-                    SocketHelperService,
-                    UserService, GraphModel,
-                    _keywords
-                ) {
-                    // Set current scope reference to models
-                    GraphModel.setScope($scope, false, 'items', 'itemCount');
+    // Controller which contains all necessary logic for book list GUI on boilerplate application.
+    angular.module('frontend.dataviz.genderviz')
+        .controller('GraphController', [
+            '$scope', '$q', '$timeout',
+            '_',
+            'SocketHelperService',
+            'UserService', 'GraphModel',
+            '_keywords',
+            function controller(
+                $scope, $q, $timeout,
+                _,
+                SocketHelperService,
+                UserService, GraphModel,
+                _keywords
+            ) {
+                // Set current scope reference to models
+                GraphModel.setScope($scope, false, 'items', 'itemCount');
 
 
-                    // Set initial data
-                    $scope.keywords = _keywords;
-                    $scope.keywordArray = [];
-                    $scope.user = UserService.user();
+                // Set initial data
+                $scope.keywords = _keywords;
+                $scope.keywordArray = [];
+                $scope.keyword = '';
+                $scope.user = UserService.user();
+                $scope.criteria = 'dialogue';
+                $scope.graph = {
+                    authgender: {},
+                    chargender: {}
+                };
 
-                    /*
-                      Function to parse keywords separated by comma
-                    */
-                    function _parseKeywords(keywords) {
-                        return keywords.split(',');
+                var myGraph = $scope.graph;
+
+                var graphDataSet;
+
+                /*
+                  Function to parse keywords separated by comma
+                */
+                function _parseKeywords(keywords) {
+                    return keywords.split(',');
+                };
+
+                /*
+                  Function to draw graph using jquery
+                */
+                function Graphics(title) {
+                    this.title = title;
+                    this.feminime = [];
+                    this.masculine = [];
+                    this.date = [];
+                    this.dateHash = {};
+                    this.labels = [];
+                    this.series = ['feminime', 'masculine'];
+                    this.data = [this.feminime, this.masculine];
+                    this.text = "";
+                };
+
+                function _renderGraph(graph, criteria) {
+                    myGraph.authgender.date = graph.authgender[criteria].date;
+                    myGraph.authgender.data = graph.authgender[criteria].data;
+                    myGraph.authgender.labels = graph.authgender[criteria].labels;
+                    myGraph.authgender.series = graph.authgender[criteria].series;
+                    myGraph.authgender.onClick = function(points, evt) {
+                        console.log(points, evt);
                     };
+                    myGraph.authgender.options = {
+                        title: {
+                            display: true,
+                            text: $scope.keyword +' - '+graph.authgender[criteria].title
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: 'rgb(0, 0, 0)'
+                            }
+                        }
+                    };
+                    myGraph.authgender.datasetOverride = [{
+                        fill: false,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        pointBorderColor: "rgba(0,0,255,0.5)"
+                    }, {
+                        fill: false,
+                        borderColor: "rgba(255,0,0,0.5)",
+                        pointBorderColor: "rgba(255,0,0,0.5)"
+                    }];
+
+                    myGraph.chargender.date = graph.chargender[criteria].date;
+                    myGraph.chargender.data = graph.chargender[criteria].data;
+                    myGraph.chargender.labels = graph.chargender[criteria].labels;
+                    myGraph.chargender.series = graph.chargender[criteria].series;
+                    myGraph.chargender.onClick = function(points, evt) {
+                        console.log(points, evt);
+                    };
+                    myGraph.chargender.options = {
+                        title: {
+                            display: true,
+                            text: $scope.keyword +' - '+graph.chargender[criteria].title
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: 'rgb(0, 0, 0)'
+                            }
+                        }
+                    };
+                    myGraph.chargender.datasetOverride = [{
+                        fill: false,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        pointBorderColor: "rgba(0,0,255,0.5)"
+                    }, {
+                        fill: false,
+                        borderColor: "rgba(255,0,0,0.5)",
+                        pointBorderColor: "rgba(255,0,0,0.5)"
+                    }];
+
+                }
+
+                function _transformGraph(dataset) {
+                    //console.log(dataset);
+                    var graphStructure = {
+                            authgender: {
+                                dialogue: new Graphics('Author Gender - Dialogue'),
+                                description: new Graphics('Author Gender - Description')
+                            },
+                            chargender: {
+                                dialogue: new Graphics('Character Gender - Dialogue'),
+                                description: new Graphics('Character Gender - Description')
+                            }
+                        }
+                        //console.log('finish structure ' + JSON.stringify(graphStructure));
+                    for (var i = 0; i < dataset.length; i++) {
+                        var row = dataset[i];
+                        //console.log(JSON.stringify(row));
+                        for (var l1 in graphStructure) {
+                            var l1val = graphStructure[l1];
+                            for (var l2 in l1val) {
+                                var l2val = l1val[l2];
+                                //console.log(l1val+','+l2val);
+                                var graphIn = graphStructure[l1][l2];
+                                //console.log(graphIn);
+                                graphIn.date.push(row.date);
+                                graphIn.labels.push(new Date(row.date).getFullYear());
+                                if (row[l1] === undefined || row[l1][l2] === undefined) {
+                                    graphIn.feminime.push(0);
+                                    graphIn.masculine.push(0);
+                                } else {
+                                    if (row[l1][l2].f !== undefined) {
+                                        graphIn.feminime.push(row[l1][l2].f.frequency);
+                                    } else {
+                                        graphIn.feminime.push(0);
+                                    }
+                                    if (row[l1][l2].m !== undefined) {
+                                        graphIn.masculine.push(row[l1][l2].m.frequency);
+                                    } else {
+                                        graphIn.masculine.push(0);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //console.log('finish structure ' + JSON.stringify(graphStructure));
+                    return graphStructure;
+                };
+
+                function _triggerDrawGraph(keywordArray) {
+                    $scope.loading = true;
+                    //console.log(keywordArray[0]);
+                    var parameters = {
+                        //                            grouptype: 'authgender',
+                        keyword: keywordArray[0]
+                    };
+                    $scope.keyword = keywordArray[0];
+
+                    // Fetch actual data
+                    var load = GraphModel
+                        .load(parameters)
+                        .then(
+                            function onSuccess(response) {
+                                graphDataSet = _transformGraph(response);
+                                _renderGraph(graphDataSet, $scope.criteria);
+                                //console.log(JSON.stringify(response));
+                                //$scope.items = response;
+
+                                /*
+                                var feminimeData = [];
+                                var masculinData = [];
+                                var dateData = [];
+                                var dateHash = {};
+                                for (var i = 0; i < response.length; i++) {
+                                    var row = response[i];
+                                    var yearDate = new Date(row.date).getFullYear();
+                                    if (dateHash[yearDate] === undefined) {
+                                        dateHash[yearDate] = {};
+                                    }
+                                    dateHash[yearDate][row.gender] = row.frequency;
+                                }
+
+                                for (var key in dateHash) {
+                                    var row = dateHash[key];
+                                    dateData.push(key);
+                                    if (row['f'] !== undefined) {
+                                        feminimeData.push(row['f']);
+                                    } else {
+                                        feminimeData.push(0);
+                                    }
+                                    if (row['m'] !== undefined) {
+                                        masculinData.push(row['m']);
+                                    } else {
+                                        masculinData.push(0);
+                                    }
+                                }
+
+                                $scope.labels = dateData;
+                                $scope.series = ['feminime', 'masculine'];
+                                $scope.data = [
+                                    feminimeData,
+                                    masculinData
+                                ];
+                                $scope.onClick = function(points, evt) {
+                                    console.log(points, evt);
+                                };
+                                $scope.options = {
+                                    title: {
+                                        display: true,
+                                        text:  ' by author gender'
+                                    }
+                                };
+
+                                $scope.datasetOverride = [{
+                                    fill: false,
+                                    borderColor: "rgba(0,0,255,0.5)",
+                                    pointBorderColor: "rgba(0,0,255,0.5)"
+                                }, {
+                                    fill: false,
+                                    borderColor: "rgba(255,0,0,0.5)",
+                                    pointBorderColor: "rgba(255,0,0,0.5)"
+                                }];
+                                */
+                            }
+                        );
+
 
                     /*
-                      Function to draw graph using jquery
-                    */
-                    function _triggerDrawGraph(keywordArray) {
-                        $scope.loading = true;
-                        console.log(keywordArray[0]);
-                        var parameters = {
-//                            grouptype: 'authgender',
-                            keyword: keywordArray[0]
-                        };
-
-                        // Fetch actual data
-                        var load = GraphModel
-                            .load(parameters)
-                            .then(
-                                function onSuccess(response) {
-                                    //console.log(JSON.stringify(response));
-                                    //$scope.items = response;
-                                    var feminimeData = [];
-                                    var masculinData = [];
-                                    var dateData = [];
-                                    var dateHash = {};
-                                    for (var i = 0; i < response.length; i++) {
-                                        var row = response[i];
-                                        var yearDate = new Date(row.date).getFullYear();
-                                        if (dateHash[yearDate] === undefined) {
-                                            dateHash[yearDate] = {};
-                                        }
-                                        dateHash[yearDate][row.gender] = row.frequency;
-                                    }
-
-                                    for (var key in dateHash) {
-                                        var row = dateHash[key];
-                                        dateData.push(key);
-                                        if (row['f'] !== undefined) {
-                                            feminimeData.push(row['f']);
-                                        } else {
-                                            feminimeData.push(0);
-                                        }
-                                        if (row['m'] !== undefined) {
-                                            masculinData.push(row['m']);
-                                        } else {
-                                            masculinData.push(0);
-                                        }
-                                    }
-
-                                    $scope.labels = dateData;
-                                    $scope.series = ['feminime', 'masculine'];
-                                    $scope.data = [
-                                        feminimeData,
-                                        masculinData
-                                    ];
-                                    $scope.onClick = function(points, evt) {
-                                        console.log(points, evt);
-                                    };
-                                    $scope.options = {
-                                        title: {
-                                            display: true,
-                                            text:  ' by author gender'
-                                        }
-                                    };
-
-                                    $scope.datasetOverride = [{
-                                        fill: false,
-                                        borderColor: "rgba(0,0,255,0.5)",
-                                        pointBorderColor: "rgba(0,0,255,0.5)"
-                                    }, {
-                                        fill: false,
-                                        borderColor: "rgba(255,0,0,0.5)",
-                                        pointBorderColor: "rgba(255,0,0,0.5)"
-                                    }];
-                            }
-                    );
-
-
                     parameters = {
                         grouptype: 'chargender',
                         keyword: keywordArray[0]
@@ -186,15 +323,18 @@
                                     }
                                 };
                                 */
-                            }
-                        );
-
+                    //}
+                    //);
                 };
 
                 // Function triggered when keywords change
                 $scope.keywordsChange = function keywordsChange() {
                     $scope.keywordArray = _parseKeywords($scope.keywords);
                     _triggerDrawGraph($scope.keywordArray);
+                };
+
+                $scope.criteriaChange = function() {
+                    _renderGraph(graphDataSet, $scope.criteria);
                 };
 
                 /**
@@ -312,5 +452,6 @@
                             }
                         );
                 }
-            }]);
+            }
+        ]);
 }());

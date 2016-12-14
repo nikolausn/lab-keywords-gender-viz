@@ -1,3 +1,16 @@
-# keywords-gender-viz
+# Words Used in Characterization: English-Language Fiction, 1800-2007
 
-a vizualisation application for visualizing graphics and gender in books
+This visualization is based on 110,041 volumes of fiction from HathiTrust Digital Library. Words associated with characters in those volumes were extracted using David Bamman's BookNLP, which identifies grammatical dependencies and tries to link dialogue to a speaker. We were particularly interested in the way characterization is shaped by ideas about gender, and in understanding how those ideas have changed over time. So our visualization divides word frequencies in two different ways: by the inferred public gender identity of the characters, and of the authors.
+
+A simple binary division between fictional "men" and "women" doesn't, of course, capture the real complexities of gender identification. But this visualization is not intended to make any claim about the reality of gender; we're interested purely in public roles. And for most of the period represented here, textual representations of gender identity were strongly shaped by a grammatical division between "feminine" and "masculine" roles.
+
+In plotting frequencies, we divide the occurrences of a word (like "heart") in a particular year and gender category by all the words used in characterization (or dialogue) for that same year and gender category.
+
+The data and metadata used here are available at [vizdata](https://github.com/tedunderwood/character/tree/master/vizdata) 
+
+Character genders were inferred by BookNLP, using names and honorifics; author genders were inferred using GenderID.py, written by Bridget Baird and Cameron Blevins (2014). We then corrected about 10% of the author genders using historical metadata produced by Edwin Roland at the Chicago Text Lab and by many hands at the Stanford Literary Lab, plus a fair amount of our own manual checking. There will still be errors in gender assignment. Moreover, these volumes have been identified as fiction using an automated process that also has a known level of error. Finally, although we have made an effort to deduplicate this dataset, and to remove reprints of volumes that were first published more than eighty years earlier, volumes are not dated strictly by first publication. Works in translation are included. For a fuller discussion of error sources, see Underwood's vizdata repo on github.
+
+This work was made possible by the WCSA+DC project at HathiTrust Research Center, supported by the Andrew W. Mellon Foundation.
+
+
+Ted Underwood and Nikolaus N. Parulian

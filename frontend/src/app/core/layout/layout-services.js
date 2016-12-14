@@ -46,7 +46,7 @@
             },*/
             {
               state: 'examples.genderviz',
-              title: 'Display Visualization',
+              title: 'Visualization',
               access: AccessLevels.anon
             }
           ],

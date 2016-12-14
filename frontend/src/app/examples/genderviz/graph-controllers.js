@@ -58,7 +58,7 @@
                     this.date = [];
                     this.dateHash = {};
                     this.labels = [];
-                    this.series = ['feminime', 'masculine'];
+                    this.series = ['feminine', 'masculine'];
                     this.data = [this.feminime, this.masculine];
                     this.text = "";
                 };
@@ -83,14 +83,14 @@
                             }
                         }
                     };
-                    myGraph.authgender.datasetOverride = [{
-                        fill: false,
-                        borderColor: "rgba(0,0,255,0.5)",
-                        pointBorderColor: "rgba(0,0,255,0.5)"
-                    }, {
+                    myGraph.authgender.datasetOverride = [ {
                         fill: false,
                         borderColor: "rgba(255,0,0,0.5)",
                         pointBorderColor: "rgba(255,0,0,0.5)"
+                    },{
+                        fill: false,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        pointBorderColor: "rgba(0,0,255,0.5)"
                     }];
 
                     myGraph.chargender.date = graph.chargender[criteria].date;
@@ -114,12 +114,12 @@
                     };
                     myGraph.chargender.datasetOverride = [{
                         fill: false,
-                        borderColor: "rgba(0,0,255,0.5)",
-                        pointBorderColor: "rgba(0,0,255,0.5)"
-                    }, {
-                        fill: false,
                         borderColor: "rgba(255,0,0,0.5)",
                         pointBorderColor: "rgba(255,0,0,0.5)"
+                    },{
+                        fill: false,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        pointBorderColor: "rgba(0,0,255,0.5)"
                     }];
 
                 }

@@ -19,7 +19,7 @@
           },
           {
             state: 'examples',
-            title: 'Books Visualization',
+            title: 'Visualization',
             access: AccessLevels.anon
           },
           {
@@ -46,7 +46,7 @@
             },*/
             {
               state: 'examples.genderviz',
-              title: 'Visualization',
+              title: 'Display Visualization',
               access: AccessLevels.anon
             }
           ],

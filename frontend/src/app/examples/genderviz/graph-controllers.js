@@ -31,7 +31,7 @@
                 $scope.keywordArray = [];
                 $scope.keyword = '';
                 $scope.user = UserService.user();
-                $scope.criteria = 'dialogue';
+                $scope.criteria = 'description';
                 $scope.graph = {
                     authgender: {},
                     chargender: {}

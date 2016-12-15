@@ -89,6 +89,20 @@
                             labels: {
                                 fontColor: 'rgb(0, 0, 0)'
                             }
+                        },
+                        scales: {
+                            xAxes: [{
+                                afterTickToLabelConversion: function(data) {
+                                    var xLabels = data.ticks;
+                                    //console.log(data.ticks);
+
+                                    xLabels.forEach(function(labels, i) {
+                                        if (i % 10 !== 0) {
+                                            xLabels[i] = '';
+                                        }
+                                    });
+                                }
+                            }]
                         }
                     };
                     myGraph.authgender.datasetOverride = [{
@@ -118,7 +132,22 @@
                             labels: {
                                 fontColor: 'rgb(0, 0, 0)'
                             }
+                        },
+                        scales: {
+                            xAxes: [{
+                                afterTickToLabelConversion: function(data) {
+                                    var xLabels = data.ticks;
+                                    //console.log(data.ticks);
+
+                                    xLabels.forEach(function(labels, i) {
+                                        if (i % 10 !== 0) {
+                                            xLabels[i] = '';
+                                        }
+                                    });
+                                }
+                            }]
                         }
+
                     };
                     myGraph.chargender.datasetOverride = [{
                         fill: false,
@@ -156,7 +185,8 @@
                                 var graphIn = graphStructure[l1][l2];
                                 //console.log(graphIn);
                                 graphIn.date.push(row.date);
-                                graphIn.labels.push(new Date(row.date).getFullYear());
+                                //console.log(row.date + ' - '+ new Date(row.date).getFullYear());
+                                graphIn.labels.push(new Date(row.date).getFullYear() + 1);
                                 if (row[l1] === undefined || row[l1][l2] === undefined) {
                                     graphIn.feminime.push(0);
                                     graphIn.masculine.push(0);
@@ -187,8 +217,8 @@
                         keyword: keywordArray[0]
                     };
                     $scope.keyword = keywordArray[0];
-                    if($scope.keywordsSuggest.indexOf($scope.keyword)<0){
-                        window.alert('keyword '+$scope.keyword+' is not in database');
+                    if ($scope.keywordsSuggest.indexOf($scope.keyword) < 0) {
+                        window.alert('keyword ' + $scope.keyword + ' is not in database');
                         return;
                     }
 

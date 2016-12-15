@@ -15,16 +15,24 @@
             'SocketHelperService',
             'UserService', 'GraphModel',
             '_keywords',
+            'KeywordsHelperService',
             function controller(
                 $scope, $q, $timeout,
                 _,
                 SocketHelperService,
                 UserService, GraphModel,
-                _keywords
+                _keywords,
+                KeywordsHelperService
             ) {
                 // Set current scope reference to models
                 GraphModel.setScope($scope, false, 'items', 'itemCount');
 
+                $scope.keywordsSuggest = [];
+
+                KeywordsHelperService.then(function(result) {
+                    $scope.keywordsSuggest = result;
+                    $scope.keyword = '';
+                });
 
                 // Set initial data
                 $scope.keywords = _keywords;
@@ -74,7 +82,7 @@
                     myGraph.authgender.options = {
                         title: {
                             display: true,
-                            text: $scope.keyword +' - '+graph.authgender[criteria].title
+                            text: $scope.keyword + ' - ' + graph.authgender[criteria].title
                         },
                         legend: {
                             display: true,
@@ -83,11 +91,11 @@
                             }
                         }
                     };
-                    myGraph.authgender.datasetOverride = [ {
+                    myGraph.authgender.datasetOverride = [{
                         fill: false,
                         borderColor: "rgba(255,0,0,0.5)",
                         pointBorderColor: "rgba(255,0,0,0.5)"
-                    },{
+                    }, {
                         fill: false,
                         borderColor: "rgba(0,0,255,0.5)",
                         pointBorderColor: "rgba(0,0,255,0.5)"
@@ -103,7 +111,7 @@
                     myGraph.chargender.options = {
                         title: {
                             display: true,
-                            text: $scope.keyword +' - '+graph.chargender[criteria].title
+                            text: $scope.keyword + ' - ' + graph.chargender[criteria].title
                         },
                         legend: {
                             display: true,
@@ -116,7 +124,7 @@
                         fill: false,
                         borderColor: "rgba(255,0,0,0.5)",
                         pointBorderColor: "rgba(255,0,0,0.5)"
-                    },{
+                    }, {
                         fill: false,
                         borderColor: "rgba(0,0,255,0.5)",
                         pointBorderColor: "rgba(0,0,255,0.5)"
@@ -137,8 +145,8 @@
                             }
                         }
                         //console.log('finish structure ' + JSON.stringify(graphStructure));
-                    for (var i = 0; i < dataset.length; i++) {
-                        var row = dataset[i];
+                    for (var i = 0; i < dataset.rows.length; i++) {
+                        var row = dataset.rows[i];
                         //console.log(JSON.stringify(row));
                         for (var l1 in graphStructure) {
                             var l1val = graphStructure[l1];
@@ -179,6 +187,10 @@
                         keyword: keywordArray[0]
                     };
                     $scope.keyword = keywordArray[0];
+                    if($scope.keywordsSuggest.indexOf($scope.keyword)<0){
+                        window.alert('keyword '+$scope.keyword+' is not in database');
+                        return;
+                    }
 
                     // Fetch actual data
                     var load = GraphModel

@@ -6,6 +6,17 @@
         <label for="keywords" class="col-md-3 control-label">Common Word: </label>
         <input id="keywords" name="keywords" class="form-control" type="text" placeholder="Enter a common word then press Enter" data-ng-model="keywords" data-ui-keypress="{'enter': 'keywordsChange($event)'}" />
     </div>
+    <!--
+    <div class="col-sm-12 col-md-6">
+        <label for="keywords" class="col-md-3 control-label">Common Word: </label>
+        <ui-select ng-model="keyword" theme="bootstrap" title="Choose a keyword">
+            <ui-select-match placeholder="Select keyword">{{$select.selected}}</ui-select-match>
+            <ui-select-choices repeat="keyword in keywordsSuggest | filter: $select.search">
+                <div ng-bind-html="keyword | highlight: $select.search"></div>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    -->
     <div class="col-sm-12 col-md-6">
         <label for="criteria" class="col-md-3 control-label">Criteria: </label>
         <select id="criteria" name="criteria" class="form-control" data-ng-model="criteria" ng-change="criteriaChange()">

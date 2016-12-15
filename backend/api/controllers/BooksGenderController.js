@@ -10,6 +10,21 @@ var actionUtil = require('sails/lib/hooks/blueprints/actionUtil');
  */
 
 var BooksGenderController = {
+    keywords: function keywords(request, response) {
+        var Model = actionUtil.parseModel(request);
+
+        Model.query("select distinct(word) from booksgender where word<>'#totalforcategory' ", [],
+            function(error, results) {
+                if (error) return response.serverError(error);
+                //transform keywords
+                var arrResult = [];
+                for (var i = 0; i < results.length; i++) {
+                    var row = results[i];
+                    arrResult.push(row.word);
+                };
+                response.json(200, arrResult);
+            });
+    },
     group: function group(request, response) {
         var Model = actionUtil.parseModel(request);
 
@@ -31,27 +46,21 @@ var BooksGenderController = {
         */
 
         sails.services.booksgendersummary.getSummaries(Model).promise.then(function(sumBooks) {
-            //console.log(sumBooks);
+            //console.log(JSON.stringify(sumBooks.years));
             /*
             parse yearlySummary into hash table
             */
-            var yearlySummary = {};
-            for (var i = 0; i < sumBooks.yearlyCounts.length; i++) {
-                yearlySummary[sumBooks.yearlyCounts[i].date] = {};
-                yearlySummary[sumBooks.yearlyCounts[i].date].total = sumBooks.yearlyCounts[i].total;
-            }
+            var yearlySummary = sumBooks.total;
 
-            Model.query("select date,authgender,chargender,role,count from booksgender where word = ? order by date asc"
-                , [keyword],
+            Model.query("select date,authgender,chargender,role,count from booksgender where word = ? order by date asc", [keyword],
                 function(error, results) {
                     if (error) return response.serverError(error);
                     var summarizer = {};
                     for (var i = 0; i < results.length; i++) {
                         var result = results[i];
-                        var yearSum = yearlySummary[result.date];
 
                         //console.log(yearSum);
-                        if(summarizer[result.date]===undefined){
+                        if (summarizer[result.date] === undefined) {
                             summarizer[result.date] = {};
                             summarizer[result.date].date = result.date;
                             summarizer[result.date].authgender = {};
@@ -59,46 +68,46 @@ var BooksGenderController = {
                         }
 
                         var aggregator = summarizer[result.date];
-                        
-                        if(aggregator.authgender[result.role]===undefined){
+
+                        if (aggregator.authgender[result.role] === undefined) {
                             aggregator.authgender[result.role] = {};
                         }
 
-                        if(aggregator.authgender[result.role][result.authgender]===undefined){
+                        if (aggregator.authgender[result.role][result.authgender] === undefined) {
                             aggregator.authgender[result.role][result.authgender] = {}
                             aggregator.authgender[result.role][result.authgender]['total'] = 0;
-                        }                            
+                        }
 
-                        aggregator.authgender[result.role][result.authgender]['total']+=parseInt(result.count);
-                        aggregator.authgender[result.role][result.authgender].frequency = aggregator.authgender[result.role][result.authgender].total/yearSum.total;
+                        aggregator.authgender[result.role][result.authgender]['total'] += parseInt(result.count);
+                        aggregator.authgender[result.role][result.authgender].frequency = aggregator.authgender[result.role][result.authgender].total / yearlySummary[result.date].authgender[result.role][result.authgender].total;
 
-                        if(aggregator.chargender[result.role]===undefined){
+                        if (aggregator.chargender[result.role] === undefined) {
                             aggregator.chargender[result.role] = {};
                         }
 
-                        if(aggregator.chargender[result.role][result.chargender]===undefined){
+                        if (aggregator.chargender[result.role][result.chargender] === undefined) {
                             aggregator.chargender[result.role][result.chargender] = {}
                             aggregator.chargender[result.role][result.chargender]['total'] = 0;
                         }
 
-                        aggregator.chargender[result.role][result.chargender]['total']+=parseInt(result.count);
-                        aggregator.chargender[result.role][result.chargender].frequency = aggregator.chargender[result.role][result.chargender].total/yearSum.total;
+                        aggregator.chargender[result.role][result.chargender]['total'] += parseInt(result.count);
+                        aggregator.chargender[result.role][result.chargender].frequency = aggregator.chargender[result.role][result.chargender].total / yearlySummary[result.date].chargender[result.role][result.chargender].total;
                     }
-                    //console.log(JSON.stringify(summarizer));
 
                     /* reorder list */
                     var summarizerResult = [];
-                    for (var i = 0; i < sumBooks.yearlyCounts.length; i++) {
-                        if(summarizer[sumBooks.yearlyCounts[i].date]===undefined){
-                            summarizerResult.push({date: sumBooks.yearlyCounts[i].date});
-                        }else{
-                            summarizerResult.push(summarizer[sumBooks.yearlyCounts[i].date]);
+                    for (var i = 0; i < sumBooks.years.length; i++) {
+                        //console.log(JSON.stringify(sumBooks.years[i]));
+                        if (summarizer[sumBooks.years[i]] === undefined) {
+                            summarizerResult.push({ date: sumBooks.years[i] });
+                        } else {
+                            summarizerResult.push(summarizer[sumBooks.years[i]]);
                         }
                     }
-//                    myResult = {};
-//                    myResult.years = sumBooks.years;
-//                    myResult.rows = summarizerResult;
-                    response.json(200, summarizerResult);
+                    var myResult = {};
+                    myResult.years = sumBooks.years;
+                    myResult.rows = summarizerResult;
+                    response.json(200, myResult);
                 });
 
             /*

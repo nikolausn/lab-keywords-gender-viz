@@ -10,8 +10,15 @@
   'use strict';
 
   angular.module('frontend.core.services')
-    .factory('HttpStatusService',
-      function factory() {
+    .factory('HttpStatusService', [
+      '$sailsSocket',
+      '_',
+      'BackendConfig',
+      function factory(
+        $sailsSocket,
+        _,
+        BackendConfig
+      ) {
         return {
           /**
            * Getter method for HTTP status message by given status code.
@@ -277,7 +284,7 @@
             return output;
           }
         };
-      }
+      }]
     )
   ;
 }());

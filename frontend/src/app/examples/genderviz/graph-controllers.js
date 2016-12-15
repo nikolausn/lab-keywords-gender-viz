@@ -94,10 +94,8 @@
                             xAxes: [{
                                 afterTickToLabelConversion: function(data) {
                                     var xLabels = data.ticks;
-                                    //console.log(data.ticks);
-
                                     xLabels.forEach(function(labels, i) {
-                                        if (i % 10 !== 0) {
+                                        if (i % 10 !== 0 && i !== xLabels.length-1) {
                                             xLabels[i] = '';
                                         }
                                     });
@@ -140,7 +138,7 @@
                                     //console.log(data.ticks);
 
                                     xLabels.forEach(function(labels, i) {
-                                        if (i % 10 !== 0) {
+                                        if (i % 10 !== 0 && i !== xLabels.length-1) {
                                             xLabels[i] = '';
                                         }
                                     });

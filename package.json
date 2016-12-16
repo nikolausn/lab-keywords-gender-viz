@@ -22,7 +22,7 @@
   "devDependencies": {},
   "scripts": {
     "install": "git submodule update --init --recursive && cd backend && npm install && cd ../frontend && npm install",
-    "start": "(cd backend && sails lift) & (cd frontend && gulp serve)",
+    "start": "(cd backend && sails lift) & (cd frontend && gulp production)",
     "test": "cd backend && mocha"
   },
   "repository": {

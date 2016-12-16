@@ -88,6 +88,7 @@ gulp.task('scsslint', ['styles'], function() {
  * Scripts
  */
 gulp.task('scripts-dist', ['templates-dist'], function() {
+  console.log(bower.name);
   return appFiles().pipe(dist('js', bower.name, {ngAnnotate: true}));
 });
 
@@ -106,7 +107,7 @@ gulp.task('templates-dist', function() {
  * Vendors
  */
 gulp.task('vendors', function() {
-  var bowerStream = mainBowerFiles();
+  var bowerStream = gulp.src(mainBowerFiles());
 
   return es.merge(
     bowerStream.pipe(g.filter('**/*.css')).pipe(dist('css', 'vendors')),
@@ -343,7 +344,7 @@ function buildTemplates() {
  */
 function dist(ext, name, opt) {
   opt = opt || {};
-
+  console.log(name+'.'+ext);
   return lazypipe()
     .pipe(g.concat, name + '.' + ext)
     .pipe(gulp.dest, './dist')

@@ -1,0 +1,142 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "waterline-sqlite3@^1.0.3",
+        "scope": null,
+        "escapedName": "waterline-sqlite3",
+        "name": "waterline-sqlite3",
+        "rawSpec": "^1.0.3",
+        "spec": ">=1.0.3 <2.0.0",
+        "type": "range"
+      },
+      "/home/ec2-user/lab-keywords-gender-viz/backend"
+    ]
+  ],
+  "_from": "waterline-sqlite3@>=1.0.3 <2.0.0",
+  "_id": "waterline-sqlite3@1.0.3",
+  "_inCache": true,
+  "_location": "/waterline-sqlite3",
+  "_nodeVersion": "6.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/waterline-sqlite3-1.0.3.tgz_1462752205902_0.9892246243543923"
+  },
+  "_npmUser": {
+    "name": "balderdash",
+    "email": "nowhere@balderdash.io"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "waterline-sqlite3@^1.0.3",
+    "scope": null,
+    "escapedName": "waterline-sqlite3",
+    "name": "waterline-sqlite3",
+    "rawSpec": "^1.0.3",
+    "spec": ">=1.0.3 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/waterline-sqlite3/-/waterline-sqlite3-1.0.3.tgz",
+  "_shasum": "1093fbecde0504b82298fc142063575fce9cb0ed",
+  "_shrinkwrap": null,
+  "_spec": "waterline-sqlite3@^1.0.3",
+  "_where": "/home/ec2-user/lab-keywords-gender-viz/backend",
+  "author": {
+    "name": "Travis Webb",
+    "email": "tjwebb@langa.io"
+  },
+  "bugs": {
+    "url": "https://github.com/waterlinejs/sqlite3-adapter/issues"
+  },
+  "bundleDependencies": [
+    "knex",
+    "lodash",
+    "moment",
+    "waterline-cursor",
+    "waterline-errors",
+    "waterline-sequel"
+  ],
+  "dependencies": {
+    "knex": "^0.9",
+    "lodash": "^3.10.0",
+    "moment": "^2.10.6",
+    "sqlite3": "github:waterlinejs/node-sqlite3",
+    "waterline-cursor": "0.0.6",
+    "waterline-errors": "^0.10.1",
+    "waterline-sequel": "^0.5.0"
+  },
+  "description": "Waterline Adapter for SQLite3",
+  "devDependencies": {
+    "babel": "5.8.38",
+    "gulp": "3.9.1",
+    "gulp-babel": "5.2.0",
+    "mocha": "latest",
+    "waterline-adapter-tests": "^0.12.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "1093fbecde0504b82298fc142063575fce9cb0ed",
+    "tarball": "https://registry.npmjs.org/waterline-sqlite3/-/waterline-sqlite3-1.0.3.tgz"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "gitHead": "80786319a0391252f2fee031da9b113ca726e22d",
+  "homepage": "https://github.com/waterlinejs/sqlite3-adapter#readme",
+  "keywords": [
+    "sqlite",
+    "sqlite3",
+    "node orm",
+    "orm",
+    "driver",
+    "es6"
+  ],
+  "license": "MIT",
+  "main": "dist/adapter",
+  "maintainers": [
+    {
+      "name": "balderdash",
+      "email": "hello@balderdash.io"
+    },
+    {
+      "name": "tjwebb",
+      "email": "me@traviswebb.com"
+    },
+    {
+      "name": "waterlinejs",
+      "email": "waterline@balderdash.io"
+    }
+  ],
+  "name": "waterline-sqlite3",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/waterlinejs/sqlite3-adapter.git"
+  },
+  "scripts": {
+    "prepublish": "gulp",
+    "test": "gulp && rm -rf .tmp/ ; NODE_ENV=test node test/integration/runner.js"
+  },
+  "url": "http://github.com/waterlinejs/sqlite3-adapter",
+  "version": "1.0.3",
+  "waterlineAdapter": {
+    "waterlineVersion": ">0.10.0",
+    "interfaces": [
+      "associations",
+      "migratable",
+      "queryable",
+      "semantic",
+      "sql"
+    ],
+    "features": [
+      "autoIncrement",
+      "crossAdapter",
+      "unique"
+    ]
+  }
+}

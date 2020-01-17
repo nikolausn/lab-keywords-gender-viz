@@ -23,7 +23,7 @@
     "gulp-babel": "^8.0.0",
     "include-all": "^1.0.8",
     "jsonwebtoken": "5.4.1",
-    "lodash": "3.10.1",
+    "lodash": "4.17.15",
     "moment-timezone": "0.4.1",
     "passport": "0.3.0",
     "passport-facebook": "2.0.0",

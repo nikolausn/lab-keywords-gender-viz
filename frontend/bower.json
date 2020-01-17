@@ -19,6 +19,7 @@
     "src"
   ],
   "dependencies": {
+    "bower": ">=1.8.8",
     "jquery": "2.1.3",
     "bootswatch-dist": "3.3.2-spacelab",
     "fontawesome": "4.3.0",

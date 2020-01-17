@@ -61,7 +61,7 @@
     "waterline-sequel"
   ],
   "dependencies": {
-    "knex": "^0.9",
+    "knex": "^0.20",
     "lodash": "^3.10.0",
     "moment": "^2.10.6",
     "sqlite3": "github:waterlinejs/node-sqlite3",

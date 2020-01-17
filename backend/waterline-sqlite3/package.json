@@ -62,7 +62,7 @@
   ],
   "dependencies": {
     "knex": "^0.9",
-    "lodash": "^3.10.0",
+    "lodash": "^4.17.15",
     "moment": "^2.10.6",
     "sqlite3": "github:waterlinejs/node-sqlite3",
     "waterline-cursor": "0.0.6",

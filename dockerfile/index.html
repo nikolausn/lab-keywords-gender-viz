@@ -1,0 +1,25 @@
+<!DOCTYPE html><html data-ng-app="frontend"><head><meta charset="utf-8"><title>Words Used in Characterization</title><link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/vendors.min.css"><link rel="stylesheet" href="/frontend.min.css"></head><body data-ng-cloak class="ng-cloak"><div data-ui-view="header"></div><div id="container" class="container main-container"><div data-ui-view="pageNavigation"></div><div data-ui-view="content"></div></div><div data-ui-view="footer"></div><script>(function onLoad() {
+                var io;
+
+                Object.defineProperty(window, 'io', {
+                    get: function get() {
+                        return io;
+                    },
+                    set: function set(value) {
+                        var sails;
+
+                        io = value;
+
+                        Object.defineProperty(io, 'sails', {
+                            get: function get() {
+                                return sails;
+                            },
+                            set: function set(value) {
+                                sails = value;
+
+                                sails.url = 'http://localhost:1337';
+                            }
+                        });
+                    }
+                });
+            })();</script><script src="/vendors.min.js"></script><script src="/frontend.min.js"></script></body></html>
